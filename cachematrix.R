@@ -8,6 +8,7 @@
 # inverse
 
 
+
 makeCacheMatrix <- function(x = matrix()) {
     m <- NULL
     set <- function(y) {
@@ -23,6 +24,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
+
 ## cacheSolve: The aim of the function is to calculate the inverse of the matrix 
 # returned by the above makeCacheMatrix. The function should retrieve the inverse
 # of the matrix from cache if it has already been calculated. Otherwise, it should
@@ -36,7 +38,7 @@ cacheSolve <- function(x, ...) {
         return(m)
     }
     data <- x$get()
-    m <- solve(data, ...)
+    m <- solve(data)
     x$setInvers(m)
     m
 }
